@@ -4,32 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blue_background"
     tools:context=".MainActivity">
 
-
-    <androidx.viewpager.widget.ViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/Tab"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/Tab_Layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Recycler_View"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/item_movie"
-        />
-    </androidx.viewpager.widget.ViewPager>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Popular_Movies"
+        app:spanCount="2"
+        tools:listitem="@layout/item_movie" />
+
+    <Button
+        android:id="@+id/Popular_Movies"
+        android:layout_width="205dp"
+        android:layout_height="50dp"
+        android:fontFamily="casual"
+        android:text="Popular Movies"
+        android:textColor="@drawable/text_color"
+        android:background="@drawable/line"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Top_Rated_Movies"
+        android:layout_width="205dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@drawable/text_color"
+        android:background="@drawable/line"
+        android:fontFamily="casual"
+        android:text="Top Rated Movies"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/Popular_Movies"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

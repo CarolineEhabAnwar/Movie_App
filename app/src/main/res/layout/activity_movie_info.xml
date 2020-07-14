@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_background"
+    tools:context=".Movie_Info">
+
+    <ImageView
+        android:id="@+id/Poster"
+        android:layout_width="match_parent"
+        android:layout_height="547dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_launcher_foreground" />
+
+
+    <TextView
+        android:id="@+id/Release_Date"
+        android:layout_width="109dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/Release_Date_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+        tools:text="Release Date" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="13dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/Poster"
+        tools:layout_editor_absoluteX="0dp"
+        tools:text="Title" />
+
+
+    <TextView
+        android:id="@+id/Original_Langauge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/Original_Langauge_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Release_Date"
+        tools:text="Original Language" />
+
+    <TextView
+        android:id="@+id/Overview_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="Overview: "
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Vote_Average_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Vote_Average_Title" />
+
+    <TextView
+        android:id="@+id/Release_Date_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="Release Date: "
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <TextView
+        android:id="@+id/Original_Langauge_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="Original Language: "
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/Release_Date_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Release_Date_Title" />
+
+    <TextView
+        android:id="@+id/Vote_Average_Title"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="Vote Average: "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Popularity_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Popularity_Title" />
+
+    <TextView
+        android:id="@+id/Popularity_Title"
+        android:layout_width="107dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="Popularity: "
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Original_Langauge_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Original_Langauge_Title" />
+
+    <TextView
+        android:id="@+id/Popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/Popularity_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Original_Langauge"
+        tools:text="Popularity" />
+
+    <TextView
+        android:id="@+id/Vote_Average"
+        android:layout_width="113dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="casual"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/Vote_Average_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Popularity"
+        tools:text="Vote Average" />
+
+    <TextView
+        android:id="@+id/Overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/Overview_Title"
+        tools:layout_editor_absoluteX="0dp"
+        tools:text="Overview" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
