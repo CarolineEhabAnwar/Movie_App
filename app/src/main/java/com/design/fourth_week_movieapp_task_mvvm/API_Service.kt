@@ -1,6 +1,5 @@
-package com.design.third_week_movieapp_task
+package com.design.fourth_week_movieapp_task_mvvm
 
-import com.design.third_week_movieapp_task.Movie_Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 import retrofit2.Call

@@ -1,4 +1,4 @@
-package com.design.third_week_movieapp_task
+package com.design.fourth_week_movieapp_task_mvvm
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

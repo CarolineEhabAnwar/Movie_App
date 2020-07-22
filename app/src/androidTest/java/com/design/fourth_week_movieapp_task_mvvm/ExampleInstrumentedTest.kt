@@ -1,4 +1,4 @@
-package com.design.third_week_movieapp_task
+package com.design.fourth_week_movieapp_task_mvvm
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

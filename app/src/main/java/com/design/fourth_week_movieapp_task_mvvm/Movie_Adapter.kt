@@ -1,4 +1,4 @@
-package com.design.third_week_movieapp_task
+package com.design.fourth_week_movieapp_task_mvvm
 
 import android.content.Context
 import android.content.Intent
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_movie.view.*
 
-class Movie_Adapter(private val context: Context,  private val moviesList: List<Movie>) :
+class Movie_Adapter(private val context: Context, private val moviesList: List<Movie>) :
     RecyclerView.Adapter<Movie_Adapter.MovieViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder
