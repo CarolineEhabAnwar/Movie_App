@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Third_Week_MovieApp_Task"
+rootProject.name = "Fourth_Week_MovieApp_Task_MVVM"

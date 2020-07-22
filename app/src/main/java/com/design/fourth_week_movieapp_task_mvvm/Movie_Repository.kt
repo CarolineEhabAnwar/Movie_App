@@ -11,15 +11,17 @@ object Movie_Repository
 {
     private val tag: String = MainActivity::class.java.simpleName
     private lateinit var APIService: API_Service
-    private val moviesList: MutableList<Movie> = mutableListOf()
+    private val Popular_Movies_List: MutableList<Movie> = mutableListOf()
+    private val Top_Movies_List: MutableList<Movie> = mutableListOf()
+
 
     fun Click_Popular() : LiveData<List<Movie>>
     {
         val moviesListLiveData: MutableLiveData<List<Movie>> = MutableLiveData()
 
-        if (moviesList.size > 0)
+        if (Popular_Movies_List.size > 0)
         {
-            moviesListLiveData.postValue(moviesList)
+            moviesListLiveData.postValue(Popular_Movies_List)
             return moviesListLiveData
         }
 
@@ -31,8 +33,8 @@ object Movie_Repository
                     if (response.isSuccessful)
                     {
                         val remoteMoviesList: List<Movie> = response.body()?.results ?: listOf()
-                        moviesList.addAll(remoteMoviesList)
-                        moviesListLiveData.postValue(moviesList)
+                        Popular_Movies_List.addAll(remoteMoviesList)
+                        moviesListLiveData.postValue(Popular_Movies_List)
                     }
                 }
 
@@ -49,9 +51,9 @@ object Movie_Repository
     {
         val moviesListLiveData: MutableLiveData<List<Movie>> = MutableLiveData()
 
-        if (moviesList.size > 0)
+        if (Top_Movies_List.size > 0)
         {
-            moviesListLiveData.postValue(moviesList)
+            moviesListLiveData.postValue(Top_Movies_List)
             return moviesListLiveData
         }
 
@@ -66,8 +68,8 @@ object Movie_Repository
                     if (response.isSuccessful)
                     {
                         val remoteMoviesList: List<Movie> = response.body()?.results ?: listOf()
-                        moviesList.addAll(remoteMoviesList)
-                        moviesListLiveData.postValue(moviesList)
+                        Top_Movies_List.addAll(remoteMoviesList)
+                        moviesListLiveData.postValue(Top_Movies_List)
                     }
                 }
 
